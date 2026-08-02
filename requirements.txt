@@ -1,0 +1,15 @@
+streamlit
+pandas
+numpy
+pdfplumber
+pdf2image
+pytesseract
+Pillow
+python-docx
+reportlab
+sentence-transformers
+faiss-cpu
+spacy
+scikit-learn
+ctransformers
+python-dotenv
