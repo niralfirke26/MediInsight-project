@@ -209,7 +209,7 @@ def generate_medical_summary_pdf(
 
     story = []
 
-    story.append(Paragraph("MedExplain Medical Summary", styles["MedTitle"]))
+    story.append(Paragraph("MediInsight Medical Summary", styles["MedTitle"]))
 
     generated_on = datetime.now().strftime("%d %B %Y, %I:%M %p")
 
