@@ -13,3 +13,5 @@ spacy
 scikit-learn
 ctransformers
 python-dotenv
+torch
+torchvision
