@@ -432,7 +432,7 @@ def display_simplified_report(
     st.download_button(
         label="📄 Download Medical Summary PDF",
         data=medical_summary_pdf,
-        file_name="medexplain_medical_summary.pdf",
+        file_name="MediInsight_medical_summary.pdf",
         mime="application/pdf",
         use_container_width=True,
     )
