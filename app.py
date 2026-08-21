@@ -11,6 +11,7 @@ from utils.pdf_extractor import extract_text_from_pdf
 from utils.medical_parser import extract_medical_values
 from utils.severity_checker import check_severity
 from utils.report_classifier import classify_report_sections
+from utils.report_validator import validate_medical_report
 from utils.medical_nlp import simplify_medical_text
 from utils.pdf_exporter import generate_medical_summary_pdf
 
@@ -192,6 +193,13 @@ def process_uploaded_report(uploaded_file, use_semantic_nlp=True, retrieval_engi
         return {
             "success": False,
             "error": "No readable text was found in this file. Please upload a text-based PDF, TXT, or DOCX report.",
+        }
+
+    validation_result = validate_medical_report(report_text)
+    if not validation_result["valid"]:
+        return {
+            "success": False,
+            "error": "🚫 Invalid Report. Please upload a valid medical report.",
         }
 
     extracted_values = extract_medical_values(report_text)
